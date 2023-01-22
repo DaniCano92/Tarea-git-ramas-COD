@@ -1,9 +1,11 @@
 package App;
 
+import javax.swing.*;
+
 public class Aplicacion {
     public String calcular(String operacion) {
         String resultado;
-        String[] ops = operacion.split( "[\\+\\-X\\/]");
+        String[] ops = operacion.split("[\\+\\-X\\/]");
         if (ops.length == 1) {
             resultado = ops[0];
         } else {
@@ -20,4 +22,12 @@ public class Aplicacion {
             resultado = String.valueOf(r);
         }
         return resultado;
+    }
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Aplicacion");
+        frame.setContentPane(new Aplicacion().root);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
