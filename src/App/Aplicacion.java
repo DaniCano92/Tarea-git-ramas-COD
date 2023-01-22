@@ -35,4 +35,22 @@ public class Aplicacion {
                 lblDisplay.setText("");
             }
         });
+        ActionListener listenerDigitos = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String texto = lblDisplay.getText() + ((JButton)e. getSource()).getText();
+                lblDisplay.setText(texto);
+            }
+        };
+        a7Button.addActionListener(listenerDigitos);
+        a4Button.addActionListener(listenerDigitos);
+        a1Button.addActionListener(listenerDigitos);
+        btnPunto.addActionListener(listenerDigitos);
+        a8Button.addActionListener(listenerDigitos);
+        a9Button.addActionListener(listenerDigitos);
+        a5Button.addActionListener(listenerDigitos);
+        a6Button.addActionListener(listenerDigitos);
+        a2Button.addActionListener(listenerDigitos);
+        a3Button.addActionListener(listenerDigitos);
+        a0Button.addActionListener(listenerDigitos);
 }
